@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Enrollment Form</title>
+   
+</head>
+<body>
+    <div class="tainer">
+        <form action="../php/process.php" method="post" enctype="multipart/form-data">
+            <h2>Enrollment Form</h2>
+
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="fname" required>
+    
+                <label for="middle-name">Middle Name:</label>
+                <input type="text" id="middle-name" name="Mname">
+    
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="lname" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div class="form-section">
+                <h3>Contact Information</h3>
+                <label for="province">Select Province:</label>
+                <select id="province" onchange="updateCityOptions()" name="province">
+                    <option value="negros-occidental">Negros Occidental</option>
+                    <!-- Add more provinces as needed -->
+                </select>
+    
+                <label for="city">Select City:</label>
+                <select id="city" enabled name="city">
+                    <!-- City options will be dynamically populated using JavaScript -->
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option> 
+                    <option value="sagay-city">Sagay City</option>
+                    <option value="sagay-city">Sagay City</option>
+                </select>
+                  
+                <label for="zip-code">Zip Code:</label>
+                <input type="text" id="zip-code" name="zip" required>
+            </div>
+
+            <!-- Academic Details Section -->
+            <div class="form-section">
+                <h3>Academic Details</h3>
+                <label for="school">School/College Name:</label>
+                <input type="text" id="school" name="school" required>
+
+                <label for="Course">Course:</label>
+                <input type="text" id="Course" name="course" required>
+
+                <label for="graduation-year">Graduation Year:</label>
+                <input type="number" id="graduation-year" name="gyear" min="2022" required>
+            </div>
+
+            <!-- Emergency Contact Section -->
+            <div class="form-section">
+                <h3>Emergency Contact</h3>
+                <label for="emergency-name">Emergency Contact Name:</label>
+                <input type="text" id="emergency-name" name="emergencyName" required>
+
+                <label for="emergency-phone">Emergency Contact Phone:</label>
+                <input type="tel" id="emergency-phone" name="emergencyPhone" required>
+            </div>
+
+            <!-- Citizenship/Identification Section -->
+            <div class="form-section">
+                <h3>Citizenship/Identification</h3>
+                <label for="citizenship">Citizenship:</label>
+                <input type="text" id="citizenship" name="citizenship" required>
+
+                <label for="id-number">Identification Number:</label>
+                <input type="text" id="id-number" name="idNum" required>
+            </div>
+
+            <!-- Medical Information Section -->
+            <div class="form-section">
+                <h3>Medical Information</h3>
+                <label for="medical-condition">Medical Condition (if any):</label>
+                <textarea id="medical-condition" name="medical_condition" rows="4"></textarea>
+            </div>
+
+            <!-- Document Upload Section -->
+            <div class="form-section">
+                <h3>Document Upload</h3>
+                <label for="document">Upload Documentation:</label>
+                <input type="file" id="document" name="file" accept=".pdf, .doc, .docx">
+            </div>
+
+            <!-- Additional Information/Preferences Section -->
+            <div class="form-section">
+                <h3>Additional Information/Preferences</h3>
+                <label for="additional-info">Additional Information/Preferences:</label>
+                <textarea id="additional-info" name="additional_info" rows="4"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
